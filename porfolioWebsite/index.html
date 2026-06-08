@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+
+
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Poppins:wght=300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cloudflare.com"
+    integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr337vr86e4smYcny3Up65AsxxG63oDYfKlkXNTqsug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root {
+      --dark-blue-primary: #0a192f;
+      --dark-blue-secondary: #172a45;
+      --dark-blue-accent: #30bced;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff !important;
+    }
+
+    .bg-dark-blue {
+      background-color: var(--dark-blue-primary) !important;
+    }
+
+    .bg-dark-blue-card {
+      background-color: var(--dark-blue-secondary) !important;
+    }
+
+    .text-accent {
+      color: var(--dark-blue-accent) !important;
+    }
+
+    .btn-accent {
+      background-color: var(--dark-blue-accent);
+      color: #0a192f;
+      font-weight: 600;
+    }
+
+    .btn-accent:hover {
+      background-color: #1cb0e6;
+      color: #0a192f;
+    }
+
+    .custom-card {
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .custom-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .center-container {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 0;
+    }
+
+    .iframe-container {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .header-center-fix {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+    }
+
+
+    .navbar-custom {
+      background-color: var(--dark-blue-secondary);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .navbar-custom .nav-link {
+      color: rgba(255, 255, 255, 0.75) !important;
+      transition: color 0.2s ease;
+    }
+
+    .navbar-custom .nav-link:hover {
+      color: var(--dark-blue-accent) !important;
+    }
+
+    .navbar-custom .navbar-brand {
+      color: var(--dark-blue-accent) !important;
+      font-weight: 600;
+    }
+
+    .navbar-custom .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .navbar-custom .navbar-toggler-icon {
+      filter: invert(1);
+    }
+  </style>
+</head>
+
+<body class="bg-dark-blue text-white">
+
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#magic-gizzball">Magic Gizzball</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pokemon-api">Pokemon API</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cpp-image">C++ Image</a></li>
+          <li class="nav-item"><a class="nav-link" href="#vector-shuffle">Vector Shuffle</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Information</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="about" class="py-5 bg-dark-blue">
+    <div class="container my-5 header-center-fix">
+      <h1 class="display-4 fw-bold text-white mb-3">My Portfolio</h1>
+      <p class="lead mb-4 text-white-50" style="max-width: 600px;">
+        I am a student at Morris County Vocational School of Technology in Computer Science. I have an interest in
+        Cybersecurity and I would like to improve my programming skill overall in order to eventually get a job in the
+        field of Cybersecurity. I currently have experience with Python, Java, Javascript, HTML, CSS and C++. These projects displayed here are made using these languages and I hope to improve and add more projects in the future. The code and files for these projects are all on my Github under the Portfolio2 repository.
+      </p>
+    </div>
+  </header>
+  <!-- Card 1 Magic Gizball-->
+  <section id="magic-gizzball" class="py-5 bg-dark-blue center-container">
+    <div class="container">
+      <div class="row g-4 text-center justify-content-center">
+        <div class="col-lg-8 col-12">
+          <div class="card h-100 bg-dark-blue-card text-white p-4 shadow-sm custom-card">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h4 card-title fw-bold text-accent mb-3">Magic Gizzball</h3>
+                <div class="iframe-container mb-3">
+                  <iframe src="https://editor.p5js.org/theblueorb2/full/pCBDVYZ2g"
+                    style="width: 100%; height: 550px; border: none;"></iframe>
+                </div>
+              </div>
+              <p class="card-text small text-white-50">The Magic Gizzball is a cat themed magic 8 ball that uses an
+                array to hold a list of random responses that are called when the button is hit. This was made in P5JS
+                using Javascript and it's purpose is to help make decisions like a traditional magic 8 ball, however the
+                Magic Gizball can hold as many custom responses as needed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- second card Pokemon API-->
+  <section id="pokemon-api" class="py-5 bg-dark-blue center-container">
+    <div class="container">
+      <div class="row g-4 text-center justify-content-center">
+        <div class="col-lg-8 col-12">
+          <div class="card h-100 bg-dark-blue-card text-white p-4 shadow-sm custom-card">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h4 card-title fw-bold text-accent mb-3">Pokemon API</h3>
+                <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+                  <video width="1000" height="800" controls>
+                    <source src="pokemonAPI.mp4">
+                  </video>
+                </div>
+              </div>
+              <p class="card-text small text-white-50">A program written in Python that uses the requests library to
+                display images of Pokemon taken from the PokeAPI. It's purpose is to display the other form of the
+                Pokemon for the user to see the visual differences between them.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- third card C++ project-->
+  <section id="cpp-image" class="py-5 bg-dark-blue center-container">
+    <div class="container">
+      <div class="row g-4 text-center justify-content-center">
+        <div class="col-lg-8 col-12">
+          <div class="card h-100 bg-dark-blue-card text-white p-4 shadow-sm custom-card">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h4 card-title fw-bold text-accent mb-3">C++ Image Project</h3>
+                <div class="iframe-container mb-3">
+                  <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+                    <video width="1000" height="800" controls>
+                      <source src="c++Image.mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="card-text small text-white-50">A project written in C++ that displays pictures of a cat along with
+              background audio and a video. All made in C++ where image displays aren't as traditonal as languages like
+              Python. It has the purpose of being a template that I could swap out for images in C++.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- final card vector shuffle -->
+  <section id="vector-shuffle" class="py-5 bg-dark-blue center-container">
+    <div class="container">
+      <div class="row g-4 text-center justify-content-center">
+        <div class="col-lg-8 col-12">
+          <div class="card h-100 bg-dark-blue-card text-white p-4 shadow-sm custom-card">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h4 card-title fw-bold text-accent mb-3">Vector Shuffle</h3>
+                <div class="image-container mb-3"
+                  style="border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
+                  <img src="vectorShuffle.png" alt="Vector Shuffle Screenshot" class="img-fluid"
+                    style="max-height: 550px; width: 100%; object-fit: contain; background: #050e1a;">
+                </div>
+              </div>
+              <p class="card-text small text-white-50">A project written in C++ that shuffles the order of a vector and
+                works with the order of the elements in the vector. This program was made to understand the concept of
+                C++ vectors better.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="bg-dark-blue-card border-top border-bottom border-secondary text-white py-5">
+    <div class="container text-center py-3">
+      <h2 class="fw-bold mb-3 text-white">My Information</h2>
+      <a href="mailto:https://github.com/GabrielArias22" class="btn btn-accent px-4 py-2">My Github: GabrielArias22</a>
+      <a href="mailto:gabrielarias2028@gmail.com" class="btn btn-accent px-4 py-2">My
+        email:gabrielarias2028@gmail.com</a>
+    </div>
+  </section>
+
+  <script src="https://cloudflare.com"
+    integrity="sha512-7Pi/otxDbb4bRydpm9a74xmlyRIAnFIv4ccATCII5vXKvqnRjk935W6RLrMgIA4NBKu26ghkg66GxMElLJWWLE=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
