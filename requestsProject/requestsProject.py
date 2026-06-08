@@ -15,14 +15,14 @@ def main():
     def get_pokemon_info(name):
         url = f"{base_url}/pokemon/{name}"
         response = requests.get(url)
-        if response.status_code == 200:
+        if response.status_code == 200: #error codes
             pokemon_data = response.json()
             return pokemon_data
         else:
             print(f"Failed to retrieve data {response.status_code}")
     def pokemon_user(): #write function
         loopy = int(input('how many pokemon?\n'))
-        for i in range(loopy):
+        for i in range(loopy): # loop to get pokemon names
             pokemon_name = input('Pokemon name?')
             with open('shiny.txt','a') as file:
                 file.write(pokemon_name+'\n')
@@ -30,7 +30,7 @@ def main():
          for line in file: 
             val = line.strip("\n")
             pokemon_name = str(val)
-            pokemon_info = get_pokemon_info(pokemon_name)
+            pokemon_info = get_pokemon_info(pokemon_name) #dta is retrieved from the api
             print(f"Name: {pokemon_info['name'].capitalize()}")
             print(f"ID: {pokemon_info['id']}")
             imgUrl = pokemon_info["sprites"]
@@ -39,11 +39,11 @@ def main():
             shiny = requests.get(imgUrl["front_shiny"])
             shinyImg = Image.open(BytesIO(shiny.content)).convert("RGBA")
             w, h = normalImg.size
-            canvas = Image.new("RGBA", (w * 2, h), (255, 255, 255, 0))
+            canvas = Image.new("RGBA", (w * 2, h), (255, 255, 255, 0)) #image displayed
             canvas.paste(normalImg, (0, 0), mask=normalImg) 
             canvas.paste(shinyImg, (w, 0), mask=shinyImg)
             canvas.show()
-    try:
+    try: #error handling for wrong inputs
         skip = int(input('Do you want to use previous list? (put 1 for yes, anything else for no)'))
         if skip == 1:
             with open ('shiny.txt','r') as file:
